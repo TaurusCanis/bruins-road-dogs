@@ -1,0 +1,14 @@
+<select name="team_id" id="teamSelector" class="mx-auto">
+    <option value="0">Select Team</option>
+    {% for team in teams %}
+        <option value="{{ team.id }}" {% if current_team and team.id == current_team.id %} selected {% endif %}>{{ team.name }}</option>
+    {% endfor %}
+</select>
+<script>
+    document.getElementById('teamSelector').addEventListener('change', function() {
+        var teamId = this.value;
+        if (teamId !== "0") {  // "0" is the value for "Select Team"
+            window.location.href = '/teams/' + teamId + '/';  // Redirect to the team's page
+        }
+    });
+</script>

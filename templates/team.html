@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="flex h-full">
+        <div class="w-20rem bg-black text-white">{% include 'components/sidebar.html' %}</div>
+        <div class="w-100 bg-gold p-2rem">
+            <div class="flex">
+                {% include 'components/select_team.html' %}
+            </div>
+            <div>
+                <h1 id="currentSectionHeading" class="text-center my-2rem"></h1>
+                <div id="contentArea">
+                    <div id="games" class="content-section">
+                        <div class="flex space-evenly wrap">
+                            {% for game in games %}
+                                <div class="bg-white border-radius-8 shadow w-33pc p-2rem mb-2rem text-center">
+                                    <h3 class="my-1rem">{{ game.title | format_title }}</h3>
+                                    <h4>{{ game.location }}</h4>
+                                    <div class="my-1rem">{{ game.startDateTimeUtc | format_date }}</div>
+                                    <button class="btn">Tickets</button>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div id="arena" class="content-section">
+                        <!-- Content for arena goes here -->
+                    </div>
+                    <div id="food-drink" class="content-section">
+                        <!-- Content for food and drink goes here -->
+                    </div>
+                    <div id="lodging" class="content-section">
+                        <!-- Content for lodging goes here -->
+                    </div>
+                    <div id="transportation" class="content-section">
+                        <!-- Content for transportation goes here -->
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("[data-section]");
+            
+            sections.forEach(section => {
+                section.addEventListener("click", function() {
+                    document.getElementById("currentSectionHeading").innerText = this.getAttribute("data-section");
+
+                    // Remove active class from all sections
+                    sections.forEach(s => s.classList.remove("active"));
+
+                    // Add active class to the clicked section
+                    this.classList.add("active");
+                });
+            });
+
+            // Set initial value
+            const activeSection = document.querySelector("[data-section].active");
+            if (activeSection) {
+                document.getElementById("currentSectionHeading").innerText = activeSection.getAttribute("data-section");
+            }
+        });
+    </script>
+{% endblock %}

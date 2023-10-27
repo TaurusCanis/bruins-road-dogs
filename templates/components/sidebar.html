@@ -1,0 +1,17 @@
+<div class="flex flex-col justify-between w-80 bg-black text-white items-center h-screen sticky top-0">
+    <nav class="flex flex-col">
+        <div class="m-4">
+            <h3>Next Game at</h3>
+            <h3>{ nextGame ? nextGame.location : "No games scheduled" }:</h3>
+            <div>{ nextGame && formatDate(nextGame.startDateTimeUtc) }</div>
+        </div>
+        <ul class="text-center flex flex-col space-y-2 font-md font-medium" id="sidebarNav">
+            <li data-section="Games" class="active">Games</li>
+            <li data-section="Arena">Arena</li>
+            <li data-section="Food and Drink">Food and Drink</li>
+            <li data-section="Lodging">Lodging</li>
+            <li data-section="Transportation">Transportation</li>
+        </ul>                
+    </nav>
+    <Image class="w-64 h-64" width={64} height={64} src="/bruins_road_dogs_logo.jpeg" quality={100} alt="Bruins Road Dogs Logo" />
+</div>

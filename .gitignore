@@ -1,0 +1,11 @@
+*.log
+.env
+__pycache__/
+.pytest_cache/
+.DS_Store
+venv/
+instance/
+# Uncomment the next line if you decide to exclude migrations
+migrations/
+dummy_data/
+
