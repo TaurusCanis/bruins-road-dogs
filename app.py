@@ -1,6 +1,6 @@
 import os
 from flask import Flask, abort, render_template, request, g
-from flask_debugtoolbar import DebugToolbarExtension
+# from flask_debugtoolbar import DebugToolbarExtension
 from .utils import get_teams, get_games, get_team_names
 from .filters import format_title, format_date
 import sqlite3
@@ -11,7 +11,7 @@ logging.basicConfig(filename='app.log', level=logging.INFO)
 
 # Configurations
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
-toolbar = DebugToolbarExtension(app)
+# toolbar = DebugToolbarExtension(app)
 app.config['DATABASE'] = os.path.join(app.instance_path, 'bruins_road_dogs.db')
 
 def get_db():
