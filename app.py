@@ -1,7 +1,7 @@
 import os
 from flask import Flask, abort, render_template, request, g
 # from flask_debugtoolbar import DebugToolbarExtension
-from utils import get_teams, get_games, get_team_names
+# from utils import get_teams, get_games, get_team_names
 from filters import format_title, format_date
 import sqlite3
 import logging
