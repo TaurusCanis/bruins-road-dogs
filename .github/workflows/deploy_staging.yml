@@ -38,12 +38,12 @@ jobs:
     - name: Run tests with pytest
       run: pytest
 
-    - name: Setup SSH
-      run: |
-        mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
-        ssh-keyscan "${{ secrets.SERVER_HOSTNAME }}" >> ~/.ssh/known_hosts
-        eval $(ssh-agent)
-        ssh-add - <<< "${{ secrets.STAGING_SSH_PRIVATE_KEY }}"
+    # - name: Setup SSH
+    #   run: |
+    #     mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
+    #     ssh-keyscan "${{ secrets.SERVER_HOSTNAME }}" >> ~/.ssh/known_hosts
+    #     eval $(ssh-agent)
+    #     ssh-add - <<< "${{ secrets.STAGING_SSH_PRIVATE_KEY }}"
 
     - name: Deploy to Staging Server
       if: success()
