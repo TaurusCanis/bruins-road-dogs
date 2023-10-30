@@ -38,23 +38,23 @@ jobs:
     - name: Run tests with pytest
       run: pytest
 
-    # - name: Setup SSH
-    #   run: |
-    #     mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
-    #     ssh-keyscan "${{ secrets.SERVER_HOSTNAME }}" >> ~/.ssh/known_hosts
-    #     eval $(ssh-agent)
-    #     ssh-add - <<< "${{ secrets.STAGING_SSH_PRIVATE_KEY }}"
-
-    - name: Create SSH key
+    - name: Setup SSH
       run: |
-        install -m 600 -D /dev/null ~/.ssh/id_rsa
-        echo "${{ secrets.STAGING_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-        echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+        mkdir -p ~/.ssh/ && touch ~/.ssh/known_hosts
+        ssh-keyscan "${{ secrets.SERVER_HOSTNAME }}" >> ~/.ssh/known_hosts
+        eval $(ssh-agent)
+        ssh-add - <<< "${{ secrets.STAGING_SSH_PRIVATE_KEY }}"
+
+    # - name: Create SSH key
+    #   run: |
+    #     install -m 600 -D /dev/null ~/.ssh/id_rsa
+    #     echo "${{ secrets.STAGING_SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+    #     echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
     - name: Deploy to Staging Server
       if: success()
       run: |
-        rsync -avz --exclude '__pycache__' --exclude 'venv' --exclude 'app.log' ./ ${{ secrets.RSYNC_DEST }}
+        rsync -avz -v --exclude '__pycache__' --exclude 'venv' --exclude 'app.log' ./ ${{ secrets.RSYNC_DEST }}
       env:
         DEPLOY_KEY: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
 
