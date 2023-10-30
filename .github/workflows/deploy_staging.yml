@@ -55,7 +55,7 @@ jobs:
     - name: Deploy to Staging Server
       if: success()
       run: |
-        rsync -avz -v --exclude '__pycache__' --exclude 'venv' --exclude 'app.log' ./ ${{ secrets.RSYNC_DEST }}
+        rsync -avz -e "ssh -i ~/.ssh/id_rsa" --exclude '__pycache__' --exclude 'venv' --exclude 'app.log' ./ ${{ secrets.RSYNC_DEST }}
       env:
         DEPLOY_KEY: ${{ secrets.STAGING_SSH_PRIVATE_KEY }}
 
