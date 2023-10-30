@@ -1,0 +1,259 @@
+[
+    {
+      "name": "Anaheim Ducks",
+      "arena": "Honda Center",
+      "city": "Anaheim",
+      "state": "California",
+      "conference": "Western",
+      "division": "Pacific"
+    },
+    {
+      "name": "Arizona Coyotes",
+      "arena": "Gila River Arena",
+      "city": "Glendale",
+      "state": "Arizona",
+      "conference": "Western",
+      "division": "Central"
+    },
+    {
+      "name": "Boston Bruins",
+      "arena": "TD Garden",
+      "city": "Boston",
+      "state": "Massachusetts",
+      "conference": "Eastern",
+      "division": "Atlantic"
+    },
+    {
+      "name": "Buffalo Sabres",
+      "arena": "KeyBank Center",
+      "city": "Buffalo",
+      "state": "New York",
+      "conference": "Eastern",
+      "division": "Atlantic"
+    },
+    {
+      "name": "Calgary Flames",
+      "arena": "Scotiabank Saddledome",
+      "city": "Calgary",
+      "state": "Alberta",
+      "conference": "Western",
+      "division": "Pacific"
+    },
+    {
+      "name": "Carolina Hurricanes",
+      "arena": "PNC Arena",
+      "city": "Raleigh",
+      "state": "North Carolina",
+      "conference": "Eastern",
+      "division": "Metropolitan"
+    },
+    {
+      "name": "Chicago Blackhawks",
+      "arena": "United Center",
+      "city": "Chicago",
+      "state": "Illinois",
+      "conference": "Western",
+      "division": "Central"
+    },
+    {
+      "name": "Colorado Avalanche",
+      "arena": "Ball Arena",
+      "city": "Denver",
+      "state": "Colorado",
+      "conference": "Western",
+      "division": "Central"
+    },
+    {
+      "name": "Columbus Blue Jackets",
+      "arena": "Nationwide Arena",
+      "city": "Columbus",
+      "state": "Ohio",
+      "conference": "Eastern",
+      "division": "Metropolitan"
+    },
+    {
+      "name": "Dallas Stars",
+      "arena": "American Airlines Center",
+      "city": "Dallas",
+      "state": "Texas",
+      "conference": "Western",
+      "division": "Central"
+    },
+    {
+      "name": "Detroit Red Wings",
+      "arena": "Little Caesars Arena",
+      "city": "Detroit",
+      "state": "Michigan",
+      "conference": "Eastern",
+      "division": "Atlantic"
+    },
+    {
+      "name": "Edmonton Oilers",
+      "arena": "Rogers Place",
+      "city": "Edmonton",
+      "state": "Alberta",
+      "conference": "Western",
+      "division": "Pacific"
+    },
+    {
+      "name": "Florida Panthers",
+      "arena": "FLA Live Arena",
+      "city": "Sunrise",
+      "state": "Florida",
+      "conference": "Eastern",
+      "division": "Atlantic"
+    },
+    {
+      "name": "Los Angeles Kings",
+      "arena": "Staples Center",
+      "city": "Los Angeles",
+      "state": "California",
+      "conference": "Western",
+      "division": "Pacific"
+    },
+    {
+      "name": "Minnesota Wild",
+      "arena": "Xcel Energy Center",
+      "city": "Saint Paul",
+      "state": "Minnesota",
+      "conference": "Western",
+      "division": "Central"
+    },
+    {
+      "name": "Montreal Canadiens",
+      "arena": "Bell Centre",
+      "city": "Montreal",
+      "state": "Quebec",
+      "conference": "Eastern",
+      "division": "Atlantic"
+    },
+    {
+      "name": "Nashville Predators",
+      "arena": "Bridgestone Arena",
+      "city": "Nashville",
+      "state": "Tennessee",
+      "conference": "Western",
+      "division": "Central"
+    },
+    {
+      "name": "New Jersey Devils",
+      "arena": "Prudential Center",
+      "city": "Newark",
+      "state": "New Jersey",
+      "conference": "Eastern",
+      "division": "Metropolitan"
+    },
+    {
+      "name": "New York Islanders",
+      "arena": "UBS Arena",
+      "city": "Elmont",
+      "state": "New York",
+      "conference": "Eastern",
+      "division": "Metropolitan"
+    },
+    {
+      "name": "New York Rangers",
+      "arena": "Madison Square Garden",
+      "city": "New York",
+      "state": "New York",
+      "conference": "Eastern",
+      "division": "Metropolitan"
+    },
+    {
+      "name": "Ottawa Senators",
+      "arena": "Canadian Tire Centre",
+      "city": "Ottawa",
+      "state": "Ontario",
+      "conference": "Eastern",
+      "division": "Atlantic"
+    },
+    {
+      "name": "Philadelphia Flyers",
+      "arena": "Wells Fargo Center",
+      "city": "Philadelphia",
+      "state": "Pennsylvania",
+      "conference": "Eastern",
+      "division": "Metropolitan"
+    },
+    {
+      "name": "Pittsburgh Penguins",
+      "arena": "PPG Paints Arena",
+      "city": "Pittsburgh",
+      "state": "Pennsylvania",
+      "conference": "Eastern",
+      "division": "Metropolitan"
+    },
+    {
+      "name": "San Jose Sharks",
+      "arena": "SAP Center",
+      "city": "San Jose",
+      "state": "California",
+      "conference": "Western",
+      "division": "Pacific"
+    },
+    {
+      "name": "Seattle Kraken",
+      "arena": "Climate Pledge Arena",
+      "city": "Seattle",
+      "state": "Washington",
+      "conference": "Western",
+      "division": "Pacific"
+    },
+    {
+      "name": "St. Louis Blues",
+      "arena": "Enterprise Center",
+      "city": "St. Louis",
+      "state": "Missouri",
+      "conference": "Western",
+      "division": "Central"
+    },
+    {
+      "name": "Tampa Bay Lightning",
+      "arena": "Amalie Arena",
+      "city": "Tampa",
+      "state": "Florida",
+      "conference": "Eastern",
+      "division": "Atlantic"
+    },
+    {
+      "name": "Toronto Maple Leafs",
+      "arena": "Scotiabank Arena",
+      "city": "Toronto",
+      "state": "Ontario",
+      "conference": "Eastern",
+      "division": "Atlantic"
+    },
+    {
+      "name": "Vancouver Canucks",
+      "arena": "Rogers Arena",
+      "city": "Vancouver",
+      "state": "British Columbia",
+      "conference": "Western",
+      "division": "Pacific"
+    },
+    {
+      "name": "Vegas Golden Knights",
+      "arena": "T-Mobile Arena",
+      "city": "Paradise",
+      "state": "Nevada",
+      "conference": "Western",
+      "division": "Pacific"
+    },
+    {
+      "name": "Washington Capitals",
+      "arena": "Capital One Arena",
+      "city": "Washington",
+      "state": "D.C.",
+      "conference": "Eastern",
+      "division": "Metropolitan"
+    },
+    {
+      "name": "Winnipeg Jets",
+      "arena": "Canada Life Centre",
+      "city": "Winnipeg",
+      "state": "Manitoba",
+      "conference": "Western",
+      "division": "Central"
+    }
+  ]
+  
