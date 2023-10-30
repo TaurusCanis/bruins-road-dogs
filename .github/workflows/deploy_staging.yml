@@ -41,9 +41,10 @@ jobs:
     - name: Setup SSH
       run: |
         mkdir -p ~/.ssh/
-        echo "${{ secrets.SERVER_HOSTNAME }}" >> ~/.ssh/known_hosts
+        ssh-keyscan ${{ secrets.SERVER_HOSTNAME }} >> ~/.ssh/known_hosts
         eval "$(ssh-agent -s)"
         echo "${{ secrets.STAGING_SSH_PRIVATE_KEY }}" | ssh-add -
+    
     
 
     # - name: Create SSH key
