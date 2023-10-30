@@ -24,6 +24,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    # Run migrations
+    - name: Run database migrations
+      run: python ./migrate.py up
+
+    # Seed the database
+    - name: Seed game and team data
+      run: python ./scripts/seed_game_and_team_data.py
         
     - name: Run tests with pytest
       run: pytest
