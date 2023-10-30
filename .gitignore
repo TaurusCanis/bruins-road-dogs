@@ -6,6 +6,6 @@ __pycache__/
 venv/
 instance/
 # Uncomment the next line if you decide to exclude migrations
-migrations/
+#migrations/
 dummy_data/
 
