@@ -7,5 +7,5 @@ venv/
 instance/
 # Uncomment the next line if you decide to exclude migrations
 #migrations/
-#dummy_data/
+dummy_data/
 
