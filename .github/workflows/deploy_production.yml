@@ -24,6 +24,8 @@ jobs:
         pip install pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
+    - name: Create instance directory
+      run: mkdir -p instance  
     # Assuming you'd still want to run migrations and seeds for production
     - name: Run database migrations
       run: python ./migrate.py up
@@ -44,6 +46,6 @@ jobs:
     - name: Deploy to Production Server
       if: success()
       run: |
-        rsync -avz --exclude '__pycache__' --exclude 'venv' --exclude 'app.log' -e "ssh -v" ./ ${{ secrets.PRODUCTION_RSYNC_DEST }}
+        rsync -avz --exclude '__pycache__' --exclude 'venv' --exclude 'app.log' -e "ssh -v" ./ ${{ secrets.RSYNC_DEST_PROD }}
       env:
         DEPLOY_KEY: ${{ secrets.PRODUCTION_SSH_PRIVATE_KEY }}
